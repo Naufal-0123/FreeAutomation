@@ -16,7 +16,8 @@ const messages = {
   "auth/email-already-in-use": "Email ini sudah terdaftar. Silakan masuk.",
   "auth/invalid-email": "Format email tidak valid.",
   "auth/weak-password": "Password terlalu lemah. Gunakan minimal 6 karakter.",
-  "auth/operation-not-allowed": "Pendaftaran email/password belum diaktifkan di Firebase.",
+  "auth/operation-not-allowed":
+    "Pendaftaran email/password belum diaktifkan di Firebase.",
   "auth/network-request-failed": "Koneksi gagal. Periksa internet kamu.",
 };
 
@@ -64,7 +65,9 @@ export default function Register() {
         <p className="lead">Daftar dengan email dan password.</p>
 
         <form onSubmit={handleSubmit} noValidate>
-          <label className="label" htmlFor="email">Email</label>
+          <label className="label" htmlFor="email">
+            Email
+          </label>
           <div className="field">
             <MailIcon />
             <input
@@ -78,7 +81,9 @@ export default function Register() {
             />
           </div>
 
-          <label className="label" htmlFor="password">Password</label>
+          <label className="label" htmlFor="password">
+            Password
+          </label>
           <div className="field">
             <LockIcon />
             <input
@@ -101,7 +106,9 @@ export default function Register() {
             </button>
           </div>
 
-          <label className="label" htmlFor="confirm">Ulangi password</label>
+          <label className="label" htmlFor="confirm">
+            Ulangi password
+          </label>
           <div className="field">
             <LockIcon />
             <input
@@ -115,16 +122,26 @@ export default function Register() {
             />
           </div>
 
-          <div className="alert" role="alert" data-testid="error-message">{error}</div>
+          <div className="alert" role="alert" data-testid="error-message">
+            {error}
+          </div>
 
-          <button type="submit" className="btn primary" disabled={busy} data-testid="register-button">
+          <button
+            type="submit"
+            className="btn primary"
+            disabled={busy}
+            data-testid="register-button"
+          >
             {busy && <span className="spinner" aria-hidden="true" />}
             {busy ? "Membuat akun…" : "Daftar"}
           </button>
         </form>
 
         <p className="switch">
-          Sudah punya akun? <Link to="/login" data-testid="link-login">Masuk</Link>
+          Sudah punya akun?{" "}
+          <Link to="/login" data-testid="link-login">
+            Masuk
+          </Link>
         </p>
       </section>
     </Shell>
