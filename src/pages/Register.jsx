@@ -130,7 +130,7 @@ export default function Register() {
             type="submit"
             className="btn primary"
             disabled={busy}
-            data-testid="register-button"
+            id="register-button"
           >
             {busy && <span className="spinner" aria-hidden="true" />}
             {busy ? "Membuat akun…" : "Daftar"}

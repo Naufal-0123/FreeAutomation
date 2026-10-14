@@ -96,7 +96,7 @@ export default function Login() {
             type="submit"
             className="btn primary"
             disabled={busy}
-            data-testid="login-button"
+            id="login-button"
           >
             {busy && <span className="spinner" aria-hidden="true" />}
             {busy ? "Memeriksa…" : "Masuk"}
@@ -105,7 +105,7 @@ export default function Login() {
 
         <p className="switch">
           Belum punya akun?{" "}
-          <Link to="/register" data-testid="link-register">
+          <Link to="/register" id="link-register">
             Daftar
           </Link>
         </p>
