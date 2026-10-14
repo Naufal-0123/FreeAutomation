@@ -55,7 +55,7 @@ export default function Dashboard() {
           className="btn outline"
           onClick={handleLogout}
           disabled={busy}
-          data-testid="logout-button"
+          id="logout-button"
         >
           {busy && <span className="spinner" aria-hidden="true" />}
           {busy ? "Keluar…" : "Keluar"}
